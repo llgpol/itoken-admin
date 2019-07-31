@@ -1,0 +1,14 @@
+version: '3.5'
+services:
+        itoken-admin:
+                image: 192.168.242.131:5000/itoken-admin
+                restart: always
+                container_name: itoken-admin
+                ports:
+                        - 8084:8084
+                networks:
+                        - my-network-name
+networks:
+        my-network-name:
+                name: admin
+
